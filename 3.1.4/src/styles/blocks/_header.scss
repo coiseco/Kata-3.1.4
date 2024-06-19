@@ -1,37 +1,107 @@
-@media screen and (max-width: 768px) {
+@media (min-width: 319px) and (max-width: 1360px) {
   .header {
     background-color: #ffffff;
   }
 
   .header-menu {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    margin-right: calc(16px + (24 - 16) * (100vw - 320px) / (767 - 320));
+    margin-left: calc(16px + (24 - 16) * (100vw - 320px) / (767 - 320));
+    padding: 0;
+  }
+
+  .header-menu__logo-section {
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
 
-  .header-menu__burger-link,
+  .header-menu__menu-content-section {
+    display: flex;
+  }
+
+  .header-menu__logo-link {
+    width: 95px;
+    height: 50px;
+  }
+
+  .header-menu__logo-img {
+    width: 100%;
+  }
+
   .menu-btn {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 40px;
     height: 40px;
-    background-color: #ff3e79;
-    border-radius: 50%;
+    margin-right: 16px;
   }
 
-  .header-menu__burger-lines {
-    width: 18px;
-    height: 16px;
+  .menu-btn:last-of-type {
+    margin: 0;
   }
 
-  .header__logo-link::after {
+  .header-menu__burger-link {
+    margin-right: calc(16px + (42 - 16) * (100vw - 320px) / (767 - 320));
+  }
+}
+
+@media (max-width: 767px) {
+  .header-menu__logo-section {
+    margin-right: calc(38px + (250 - 38) * (100vw - 320px) / (767 - 320));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1360px) {
+  .header-menu__logo-section {
+    margin-right: 250px;
+  }
+
+  .menu-btn:nth-child(4) {
+    margin-left: 42px;
+    position: relative;
+  }
+
+  .menu-btn:nth-child(4)::before {
     content: " ";
     position: absolute;
-    top: 10px;
-    left: 30px;
+    top: 4px;
+    left: -28px;
     width: 2px;
     height: 32px;
     background-color: #eaeaea;
     border-radius: 1px;
+  }
+
+  .header-menu__logo-link::after {
+    content: " ";
+    position: absolute;
+    top: 28px;
+    left: calc(84px + (114 - 84) * (100vw - 768px) / (1360 - 768));
+    width: 2px;
+    height: 32px;
+    background-color: #eaeaea;
+    border-radius: 1px;
+  }
+
+  .header-menu__medium-screen-link {
+    display: flex;
+    position: relative;
+    clip-path: none;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 1361px) {
+  .header {
+    visibility: hidden;
   }
 }

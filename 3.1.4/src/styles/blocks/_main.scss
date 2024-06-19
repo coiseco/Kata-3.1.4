@@ -1,0 +1,13 @@
+@media (max-width: 769px) {
+  .main-content__img {
+    width: calc(320px + (360 - 320) * ((100vw - 320px) / (769 - 320)));
+    height: calc(176px + (208 - 176) * ((100vw - 320px) / (769 - 320)));
+  }
+}
+
+@media (min-width: 770px) and (max-width: 1360px) {
+  .main-content__img {
+    width: calc(360px + (531 - 360) * ((100vw - 770px) / (1360 - 770)));
+    height: calc(208px + (307 - 208) * ((100vw - 770px) / (1360 - 770)));
+  }
+}

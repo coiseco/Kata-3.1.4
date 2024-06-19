@@ -5,6 +5,12 @@ body {
   background-color: #f8f8f8;
 }
 
+@media (max-width: 1360px) {
+  .wrapper {
+    width: calc(320px + (1360 - 320) * (100vw - 320px) / (1360 - 320));
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -16,4 +22,12 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.img {
+  background-color: #ff3e79;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  clip-path: circle(50%);
 }
