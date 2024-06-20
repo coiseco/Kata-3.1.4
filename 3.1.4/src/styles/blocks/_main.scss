@@ -1,3 +1,38 @@
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header__title {
+  position: relative;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 40px;
+  margin-left: calc(13px + (31 - 13) * ((100vw - 320px) / (1360 - 320)));
+}
+
+.main-header__title::before {
+  content: " ";
+  position: absolute;
+  top: 0px;
+  left: calc(-13px + (13 - 31) * ((100vw - 320px) / (1360 - 320)));
+  width: 4px;
+  height: 40px;
+  background-color: #41f6d7;
+  border-radius: 0 30px 30px 0;
+}
+
+.main-content__text {
+  width: calc(288px + (491 - 288) * ((100vw - 320px) / (1360 - 320)));
+  font-size: 14px;
+  line-height: 18px;
+}
+
 @media (max-width: 769px) {
   .main-content__img {
     width: calc(320px + (360 - 320) * ((100vw - 320px) / (769 - 320)));
@@ -9,5 +44,86 @@
   .main-content__img {
     width: calc(360px + (531 - 360) * ((100vw - 770px) / (1360 - 770)));
     height: calc(208px + (307 - 208) * ((100vw - 770px) / (1360 - 770)));
+  }
+
+  .main-content__text {
+    line-height: 20px;
+  }
+
+  .section-text__text-for-middle-screen {
+    position: relative;
+    height: auto;
+    clip-path: none;
+    overflow: visible;
+    white-space: inherit;
+  }
+}
+
+@media (min-width: 1360px) {
+  .main-wrapper {
+    margin-top: -58px;
+  }
+
+  .main-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-header__header-list {
+    position: relative;
+    clip-path: none;
+    overflow: visible;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-list__list-element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+  }
+
+  .header-list__list-element:last-child {
+    margin-left: 32px;
+  }
+
+  .list-element__list-link {
+    color: black;
+    text-decoration: none;
+  }
+
+  .list-element__list-img {
+    margin-left: 8px;
+  }
+
+  .main-header__title {
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-content__text {
+    line-height: 20px;
+  }
+
+  .section-text__text-for-middle-screen {
+    position: relative;
+    height: auto;
+    clip-path: none;
+    overflow: visible;
+    white-space: inherit;
+  }
+
+  .section-text__text-for-pc-screen {
+    position: relative;
+    height: auto;
+    clip-path: none;
+    overflow: visible;
+    white-space: inherit;
   }
 }
