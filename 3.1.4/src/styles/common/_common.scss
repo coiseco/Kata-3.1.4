@@ -1,15 +1,16 @@
 body {
   font-family: "TT Lakes", sans-serif;
+  font-weight: 400;
   min-width: 320px;
-  max-width: 1360px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 0 auto;
   background-color: #f8f8f8;
 }
 
-@media (max-width: 1360px) {
+@media (max-width: 1120px) {
   .wrapper {
-    width: calc(320px + (1360 - 320) * (100vw - 320px) / (1360 - 320));
+    width: calc(320px + (1120 - 320) * (100vw - 320px) / (1120 - 320));
   }
 }
 

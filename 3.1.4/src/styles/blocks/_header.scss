@@ -1,4 +1,4 @@
-@media (max-width: 1360px) {
+@media (max-width: 1120px) {
   .header-menu {
     background-color: #ffffff;
     display: flex;
@@ -25,6 +25,7 @@
   .header-menu__logo-link {
     width: 95px;
     height: 50px;
+    cursor: pointer;
   }
 
   .header-menu__logo-img {
@@ -38,6 +39,7 @@
     width: 40px;
     height: 40px;
     margin-right: 16px;
+    cursor: pointer;
   }
 
   .menu-btn:last-of-type {
@@ -70,7 +72,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1360px) {
+@media (min-width: 768px) and (max-width: 1120px) {
   .header-menu__logo-section {
     margin-right: 250px;
   }
@@ -83,7 +85,7 @@
     content: " ";
     position: absolute;
     top: 28px;
-    left: calc(84px + (114 - 84) * (100vw - 768px) / (1360 - 768));
+    left: calc(84px + (114 - 84) * (100vw - 768px) / (1120 - 768));
     width: 2px;
     height: 32px;
     background-color: #eaeaea;
@@ -101,7 +103,7 @@
   }
 }
 
-@media (min-width: 1361px) {
+@media (min-width: 1120px) {
   .header {
     visibility: hidden;
   }
