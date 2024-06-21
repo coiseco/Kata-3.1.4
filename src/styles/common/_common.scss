@@ -1,0 +1,36 @@
+body {
+  font-family: "TT Lakes", sans-serif;
+  font-weight: 400;
+  min-width: 320px;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 auto;
+  background-color: #f8f8f8;
+}
+
+@media (max-width: 1120px) {
+  .wrapper {
+    width: calc(320px + (1120 - 320) * (100vw - 320px) / (1120 - 320));
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.img {
+  background-color: #ff3e79;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  clip-path: circle(50%);
+}

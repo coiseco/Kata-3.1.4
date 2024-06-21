@@ -1,0 +1,110 @@
+@media (max-width: 1120px) {
+  .header-menu {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-right: calc(16px + (24 - 16) * (100vw - 320px) / (767 - 320));
+    padding-left: calc(16px + (24 - 16) * (100vw - 320px) / (767 - 320));
+    margin: 0;
+  }
+
+  .header-menu__logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-menu__menu-content-section {
+    display: flex;
+  }
+
+  .header-menu__logo-link {
+    width: 95px;
+    height: 50px;
+    cursor: pointer;
+  }
+
+  .header-menu__logo-img {
+    width: 100%;
+  }
+
+  .menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+    cursor: pointer;
+  }
+
+  .menu-btn:last-of-type {
+    margin: 0;
+  }
+
+  .menu-btn:nth-child(4) {
+    position: relative;
+  }
+
+  .menu-btn:nth-of-type(4)::before {
+    content: " ";
+    position: absolute;
+    top: 4px;
+    left: -28px;
+    width: 2px;
+    height: 32px;
+    background-color: #eaeaea;
+    border-radius: 1px;
+  }
+
+  .header-menu__burger-link {
+    margin-right: calc(16px + (42 - 16) * (100vw - 320px) / (767 - 320));
+  }
+}
+
+@media (max-width: 767px) {
+  .header-menu__logo-section {
+    margin-right: calc(38px + (250 - 38) * (100vw - 320px) / (767 - 320));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1120px) {
+  .header-menu__logo-section {
+    margin-right: 250px;
+  }
+
+  .menu-btn:nth-child(4) {
+    margin-left: 42px;
+  }
+
+  .header-menu__logo-link::after {
+    content: " ";
+    position: absolute;
+    top: 28px;
+    left: calc(84px + (114 - 84) * (100vw - 768px) / (1120 - 768));
+    width: 2px;
+    height: 32px;
+    background-color: #eaeaea;
+    border-radius: 1px;
+  }
+
+  .header-menu__medium-screen-link {
+    display: flex;
+    position: relative;
+    clip-path: none;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .header {
+    visibility: hidden;
+  }
+}
