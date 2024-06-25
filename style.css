@@ -223,16 +223,22 @@ body {
 
 .list-of-services__list-item {
   list-style-type: none;
-  padding: 8px 16px;
 }
 
-.list-of-services__list-item--list-item--active {
+/* .list-of-services__list-item:hover {
   border: 2px solid #b8ffec;
   border-radius: 6px;
   background-color: #ffffff;
 }
 
+.list-of-services__list-item:active {
+  border: 2px solid #b8ffec;
+  border-radius: 6px;
+  background-color: #ffffff;
+} */
+
 .list-of-services__services-list-link {
+  display: inline-block;
   text-decoration: none;
   white-space: nowrap;
   font-weight: 700;
@@ -240,6 +246,14 @@ body {
   line-height: 24px;
   letter-spacing: -0.2px;
   color: #7e7e82;
+  cursor: pointer;
+  padding: 8px 16px;
+  border: 2px solid #f8f8f8;
+}
+.list-of-services__services-list-link:hover {
+  border: 2px solid #b8ffec;
+  border-radius: 6px;
+  background-color: #ffffff;
 }
 
 .main-content__text-expand-img {
@@ -309,6 +323,7 @@ body {
     letter-spacing: -0.2px;
     position: relative;
     height: auto;
+    cursor: pointer;
     clip-path: none;
     overflow: visible;
     white-space: inherit;
