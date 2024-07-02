@@ -16,12 +16,11 @@
         </section>
       </header>
       <main class="main">
-        <nav class="main-menu">
+        <nav class="main__menu main-menu">
           <ul class="main-menu__list">
             <li class="main-menu__list-item">
               <a class="main-menu__list-link main-menu__list-link--mod--active"
-                >Ремонт техники</a
-              >
+                >Ремонт техники</a>
             </li>
             <li class="main-menu__list-item">
               <a class="main-menu__list-link">Услуги и сервисы</a>
@@ -61,13 +60,14 @@
             >8 800 890 8900</a
           >
         </section>
-        <section class="footer__language">
-          <a class="footer__language-link footer__language-link--mod--active"
-            >RU</a
-          >
-          <a class="footer__language-link">EN</a>
-          <a class="footer__language-link">CH</a>
-        </section>
+        <form action="" method="get" class="footer__language" >
+          <input type="radio" id="RU" name="footer__language-link" class="footer__language-link">
+          <label for="RU" class="footer__language-label">RU</label>
+          <input type="radio" id="EN" name="footer__language-link" class="footer__language-link">
+          <label for="EN" class="footer__language-label">EN</label>
+          <input type="radio" id="CH" name="footer__language-link" class="footer__language-link">
+          <label for="CH" class="footer__language-label">CH</label>
+        </form>
       </footer>
     </aside>
   </body>

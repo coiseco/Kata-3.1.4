@@ -64,6 +64,11 @@ body {
   border-radius: 50px;
 }
 
+.menu-btn:hover {
+  transition-duration: 700ms;
+  filter: brightness(70%);
+}
+
 .header-menu__btn:first-child {
   background-image: url('../images/close.svg');
 }
@@ -83,7 +88,7 @@ body {
   background-image: url('../images/profile.svg');
 }
 
-.main-menu {
+.main__menu {
   margin-bottom: 268px;
 }
 
@@ -99,17 +104,27 @@ body {
   list-style-type: none;
 }
 
-.main-menu__list-link:hover::before,
+.main-menu__list-link::before,
 .main-menu__list-link--mod--active::before,
-.main-menu__list-link:active::before {
-  content: ' ';
+.main-menu__list-link::before {
+  opacity: 0;
+  content: '';
   position: absolute;
-  top: 0px;
+  top: -5px;
   left: -24px;
   width: 4px;
   height: 32px;
   background-color: #41f6d7;
   border-radius: 0 30px 30px 0;
+}
+
+.main-menu__list-link--mod--active::before{
+  opacity: 1;
+}
+
+.main-menu__list-link:hover::before{
+  transition-duration: 700ms;
+  opacity: 1;
 }
 
 .main-menu__list-link:active::before {
@@ -137,6 +152,7 @@ body {
 }
 
 .main-menu__list-link:hover {
+  transition-duration: 700ms;
   color: #7e7e82;
 }
 
@@ -179,18 +195,41 @@ body {
   margin: 40px 0 32px 24px;
 }
 
-.footer__language-link {
-  margin-right: 7px;
-  font-size: 16px;
+.footer__language-link:checked,
+.footer__language-link:not(:checked){
+  position: absolute;
+  opacity: 0;
+  z-index: -1;;
+}
+
+.footer__language-link:checked + .footer__language-label,
+.footer__language-link:not(:checked) + .footer__language-label{
+  display: inline-block;
+  position: relative;
   font-weight: 700;
+  font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
-  color: #1b1c21;
+  margin-right: 7px;
   cursor: pointer;
 }
 
-.footer__language-link:hover,
-.footer__language-link--mod--active {
+.footer__language-link:checked + .footer__language-label::before,
+.footer__language-link:not(:checked) + .footer__language-label::before{
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}
+
+.footer__language-link:checked + .footer__language-label{
+  color: #7e7e82;
+}
+
+.footer__language-label:hover {
   color: #7e7e82;
 }
 
