@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: local(' '), url('../fonts/TTLakes-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: local(' '), url('../fonts/TTLakes-Medium.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: local(' '), url('../fonts/TTLakes-Bold.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'TT Lakes', sans-serif;
+    font-weight: 400;
+    min-width: 320px;
+    max-width: 1120px;
+    margin: 0 ;
+    padding: 0 ;
+    background-color: #f8f8f8;
+}
+
+.header {
+    background-color: #ffffff;
+}
+
+.header-inner {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 80px;
+    padding: 16px;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color:#7E7E82;
+}
+
+.swiper .main-wrapper {
+    max-width: 240px;
+    height: 72px;
+}
+
+.swiper-slide {
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.swiper-wrapper{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.main-list-link {
+    display: inline-block;
+    width: 240px;
+    height: 72px;
+    padding: 0;
+    margin: 0;
+}
+
