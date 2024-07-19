@@ -9,7 +9,9 @@ if (document.documentElement.clientWidth > 768) {
         // Optional parameters
         direction: 'horizontal',
         loop: true,
-        spaceBetween: auto,
+        spaceBetween: 16,
+        slidesPerView: 'auto',
+        gap: 16,
       
         // If we need pagination
         pagination: {
