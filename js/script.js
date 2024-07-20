@@ -1,39 +1,34 @@
-
 let buttonSh = document.querySelector('.main-button');
 
 function swiperOff() {
-    let listSliderDeact = document.querySelector('.main-list');
+  let listSliderDeact = document.querySelector('.main-list');
 
-    if (swiper){
-        swiper.destroy();
-    }
+  if (swiper) {
+    swiper.destroy();
+  }
 
-    listSliderDeact.classList.add('main-list--slider-deactive');
-    listSliderDeact.classList.remove('swiper-wrapper')
-    // listSliderDeact.style.maxWidth = (widthSize) + 'px';
+  listSliderDeact.classList.add('main-list--slider-deactive');
+  listSliderDeact.classList.remove('swiper-wrapper');
 }
 
 const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    spaceBetween: 16,
-    slidesPerView: 'auto',
-    gap: 16,
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  spaceBetween: 16,
+  slidesPerView: 'auto',
+  gap: 16,
 
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
 });
 
-if (document.documentElement.clientWidth > 768 && document.documentElement.clientWidth < 1120) {
-    
-    swiperOff();
-
-} else if (document.documentElement.clientWidth > 1120){
-    swiperOff();
+if (document.documentElement.clientWidth > 768) {
+  swiperOff();
 } else {
-    swiper
+  swiper;
 }
