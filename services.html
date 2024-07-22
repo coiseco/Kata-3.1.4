@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slider</title>
     <link rel="stylesheet" href="./css/services.css">
-    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11.1.5/swiper-bundle.min.css" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -72,17 +72,14 @@
                     </a>
                 </li>
             </ul>
-            <div class="swiper-pagination">
-            <img src="./images/Oval Copy 5.png" alt="" class="pagination-img">
-            <img src="./images/Oval Copy 5.png" alt="" class="pagination-img">
-            <img src="./images/Oval Copy 5.png" alt="" class="pagination-img">
-            <img src="./images/Oval Copy 5.png" alt="" class="pagination-img">
-            <img src="./images/Oval Copy 5.png" alt="" class="pagination-img">
-            </div>
-            <a href="#" class="main-button"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="button-wrapper" id="showButtonWrapper">
+            <div class="button-wrapper__arrow" id="arrow"></div>
+            <a  href="#" class="button-wrapper__button" id="showButton">Показать все</a>
         </div>
     </main>
-    <script src="./js/swiper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.5/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>
