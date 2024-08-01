@@ -1,4 +1,4 @@
-let listSliderDeact = document.querySelector('.main-list');
+let listSliderDeact = document.querySelector('.slider-main__list');
 let buttonShow = document.querySelector('#showButtonWrapper');
 let buttonArrow = buttonShow.querySelector('#arrow');
 let element = buttonShow.querySelector('#showButton');
@@ -9,7 +9,7 @@ function swiperOff() {
     swiper.destroy();
   }
 
-  listSliderDeact.classList.add('main-list--slider-deactive');
+  listSliderDeact.classList.add('slider-main__list--slider-deactive');
   listSliderDeact.classList.remove('swiper-wrapper');
   pagginationOff.remove();
 }
@@ -18,16 +18,22 @@ function showContent() {
   buttonShow.addEventListener('click', function (evt) {
     evt.preventDefault();
 
-    let contentShowing = document.querySelector('.main-list--show-content');
+    let contentShowing = document.querySelector(
+      '.slider-main__list--show-content'
+    );
 
     if (!contentShowing) {
-      listSliderDeact.classList.add('main-list--show-content');
+      listSliderDeact.classList.add('slider-main__list--show-content');
+      listSliderDeact.classList.remove('slider-main__list--hide-content');
       element.textContent = 'Скрыть';
-      buttonArrow.classList.add('button-wrapper__arrow--reverse');
+      buttonArrow.classList.add('slider-button__arrow--reverse');
+      buttonArrow.classList.remove('slider-button__arrow--forward');
     } else {
-      listSliderDeact.classList.remove('main-list--show-content');
+      listSliderDeact.classList.remove('slider-main__list--show-content');
+      listSliderDeact.classList.add('slider-main__list--hide-content');
       element.textContent = 'Показать всё';
-      buttonArrow.classList.remove('button-wrapper__arrow--reverse');
+      buttonArrow.classList.remove('slider-button__arrow--reverse');
+      buttonArrow.classList.add('slider-button__arrow--forward');
     }
   });
 }

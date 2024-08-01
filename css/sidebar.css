@@ -1,20 +1,26 @@
 @font-face {
   font-family: 'TT Lakes';
-  src: local(' '), url('../fonts/TTLakes-Regular.woff2') format('woff2');
+  src:
+    local(' '),
+    url('../fonts/TTLakes-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'TT Lakes';
-  src: local(' '), url('../fonts/TTLakes-Medium.woff2') format('woff2');
+  src:
+    local(' '),
+    url('../fonts/TTLakes-Medium.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'TT Lakes';
-  src: local(' '), url('../fonts/TTLakes-Bold.woff2') format('woff2');
+  src:
+    local(' '),
+    url('../fonts/TTLakes-Bold.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -118,11 +124,11 @@ body {
   border-radius: 0 30px 30px 0;
 }
 
-.main-menu__list-link--mod--active::before{
+.main-menu__list-link--mod--active::before {
   opacity: 1;
 }
 
-.main-menu__list-link:hover::before{
+.main-menu__list-link:hover::before {
   transition-duration: 700ms;
   opacity: 1;
 }
@@ -196,14 +202,14 @@ body {
 }
 
 .footer__language-link:checked,
-.footer__language-link:not(:checked){
+.footer__language-link:not(:checked) {
   position: absolute;
   opacity: 0;
-  z-index: -1;;
+  z-index: -1;
 }
 
 .footer__language-link:checked + .footer__language-label,
-.footer__language-link:not(:checked) + .footer__language-label{
+.footer__language-link:not(:checked) + .footer__language-label {
   display: inline-block;
   position: relative;
   font-weight: 700;
@@ -215,8 +221,8 @@ body {
 }
 
 .footer__language-link:checked + .footer__language-label::before,
-.footer__language-link:not(:checked) + .footer__language-label::before{
-  content: "";
+.footer__language-link:not(:checked) + .footer__language-label::before {
+  content: '';
   position: absolute;
   left: 10px;
   top: 4px;
@@ -225,7 +231,7 @@ body {
   cursor: pointer;
 }
 
-.footer__language-link:checked + .footer__language-label{
+.footer__language-link:checked + .footer__language-label {
   color: #7e7e82;
 }
 
